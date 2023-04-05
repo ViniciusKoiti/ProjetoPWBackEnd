@@ -1,4 +1,4 @@
-package Models;
+package com.github.CrudGit.Models;
 
 import jakarta.persistence.*;
 
@@ -13,9 +13,7 @@ public class Repository {
     private Long id;
     @Column(nullable = false)
     private String name;
-    @Column(nullable = false)
-    private String link;
-    @OneToMany(mappedBy = "commit")
+    @OneToMany(mappedBy = "repository")
     private List<Commit> commit;
 
     @Temporal(TemporalType.DATE)
@@ -46,14 +44,6 @@ public class Repository {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public String getLink() {
-        return link;
-    }
-
-    public void setLink(String link) {
-        this.link = link;
     }
 
     public void setCommit(List<Commit> commit) {

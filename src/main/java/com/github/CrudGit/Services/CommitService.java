@@ -1,15 +1,16 @@
-package Services;
+package com.github.CrudGit.Services;
 
-import Controllers.CommitResponse.CommitResponse;
-import Controllers.CommitResponse.UtilResponse.UtilResponse;
-import Models.Commit;
-import Models.Repository;
-import Models.User;
-import Repository.UserRepository;
+import com.github.CrudGit.Controllers.CommitResponse.CommitResponse;
+import com.github.CrudGit.Controllers.CommitResponse.UtilResponse.UtilResponse;
+import com.github.CrudGit.Models.Commit;
+import com.github.CrudGit.Models.Repository;
+import com.github.CrudGit.Models.User;
+import com.github.CrudGit.Repository.UserRepository;
+import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
 import java.util.*;
-
+@Service
 public class CommitService {
     private final UserRepository userRepository;
 
@@ -43,6 +44,7 @@ public class CommitService {
         List<String> commentsCommits = commentAboutCommit(commitsByDay);
         commitResponse.setResumeCommit(commentsCommits);
         commitResponse.setPercentualCommit(percentualCommitByTime(commitResponse));
+        commitResponse.setUrlLink(getUrlGit(repository.getName(),commitResponse.getNameUser()));
     }
 
     private CommitResponse constructCommitResponse(User user) {
@@ -78,5 +80,9 @@ public class CommitService {
             commentsAboutCommit.add(commentAboutCommit);
         }
         return commentsAboutCommit;
+    }
+
+    private String getUrlGit(String user,String repository){
+        return String.format(UtilResponse.URL_GITHUB_REPOSITORY,user,repository);
     }
 }

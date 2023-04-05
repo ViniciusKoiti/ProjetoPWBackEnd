@@ -1,6 +1,6 @@
-package Controllers.CommitResponse;
+package com.github.CrudGit.Controllers.CommitResponse;
 
-import Models.Repository;
+import com.github.CrudGit.Models.Repository;
 
 import java.util.Date;
 import java.util.List;
@@ -14,6 +14,12 @@ public class CommitResponse {
     private List<Repository> repositories;
     private double percentualCommit;
     private List<String> resumeCommit;
+
+    private String urlLink;
+
+    public void setUrlLink(String urlLink){
+        this.urlLink = urlLink;
+    }
 
     public String getNameUser() {
         return nameUser;

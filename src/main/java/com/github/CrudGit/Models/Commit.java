@@ -1,4 +1,4 @@
-package Models;
+package com.github.CrudGit.Models;
 
 import jakarta.persistence.*;
 
