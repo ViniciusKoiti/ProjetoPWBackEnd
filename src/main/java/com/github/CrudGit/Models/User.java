@@ -1,4 +1,4 @@
-package Models;
+package com.github.CrudGit.Models;
 
 import jakarta.persistence.*;
 
@@ -12,7 +12,7 @@ public class User {
     private Long id;
     @Column(nullable = false)
     private String name;
-    @OneToMany(mappedBy = "repositories")
+    @OneToMany(mappedBy = "user")
     private List<Repository> repositories;
 
     public List<Repository> getRepositories(){

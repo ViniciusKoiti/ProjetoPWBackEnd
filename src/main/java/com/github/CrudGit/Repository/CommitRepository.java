@@ -1,6 +1,6 @@
-package Repository;
+package com.github.CrudGit.Repository;
 
-import Models.Commit;
+import com.github.CrudGit.Models.Commit;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface CommitRepository extends JpaRepository<Commit,Long> {

@@ -1,15 +1,16 @@
-package Services;
+package com.github.CrudGit.Services;
 
-import Controllers.CommitResponse.CommitResponse;
-import Controllers.CommitResponse.UtilResponse.UtilResponse;
-import Models.Commit;
-import Models.Repository;
-import Models.User;
-import Repository.UserRepository;
+import com.github.CrudGit.Controllers.CommitResponse.CommitResponse;
+import com.github.CrudGit.Controllers.CommitResponse.UtilResponse.UtilResponse;
+import com.github.CrudGit.Models.Commit;
+import com.github.CrudGit.Models.Repository;
+import com.github.CrudGit.Models.User;
+import com.github.CrudGit.Repository.UserRepository;
+import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
 import java.util.*;
-
+@Service
 public class CommitService {
     private final UserRepository userRepository;
 

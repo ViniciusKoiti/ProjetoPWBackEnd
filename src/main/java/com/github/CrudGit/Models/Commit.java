@@ -1,4 +1,4 @@
-package Models;
+package com.github.CrudGit.Models;
 
 import jakarta.persistence.*;
 
@@ -17,8 +17,6 @@ public class Commit {
     private LocalDate data;
     @Column(nullable = false)
     private String comment;
-    @Column(nullable = false)
-    private int numberCommit;
     @ManyToOne
     private Repository repository;
 
@@ -45,14 +43,5 @@ public class Commit {
     public void setComment(String comment) {
         this.comment = comment;
     }
-
-    public int getNumberCommit() {
-        return numberCommit;
-    }
-
-    public void setNumberCommit(int numberCommit) {
-        this.numberCommit = numberCommit;
-    }
-
 
 }

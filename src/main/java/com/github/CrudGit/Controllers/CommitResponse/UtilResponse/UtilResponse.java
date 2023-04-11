@@ -1,4 +1,4 @@
-package Controllers.CommitResponse.UtilResponse;
+package com.github.CrudGit.Controllers.CommitResponse.UtilResponse;
 
 public class UtilResponse {
 

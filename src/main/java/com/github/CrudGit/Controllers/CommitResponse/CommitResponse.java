@@ -1,6 +1,6 @@
-package Controllers.CommitResponse;
+package com.github.CrudGit.Controllers.CommitResponse;
 
-import Models.Repository;
+import com.github.CrudGit.Models.Repository;
 
 import java.util.Date;
 import java.util.List;
