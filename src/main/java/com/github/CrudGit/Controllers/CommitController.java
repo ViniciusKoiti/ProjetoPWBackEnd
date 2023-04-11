@@ -13,6 +13,7 @@ import java.util.List;
 @RestController
 @CrossOrigin
 @RequestMapping("/commit")
+@CrossOrigin
 public class CommitController {
     @Autowired
     private final CommitService commitService;

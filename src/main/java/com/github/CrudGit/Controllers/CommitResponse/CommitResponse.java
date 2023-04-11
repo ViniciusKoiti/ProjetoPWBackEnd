@@ -15,6 +15,12 @@ public class CommitResponse {
     private double percentualCommit;
     private List<String> resumeCommit;
 
+    private String urlLink;
+
+    public void setUrlLink(String urlLink){
+        this.urlLink = urlLink;
+    }
+
     public String getNameUser() {
         return nameUser;
     }

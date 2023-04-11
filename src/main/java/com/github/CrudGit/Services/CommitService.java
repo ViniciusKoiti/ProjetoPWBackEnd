@@ -44,6 +44,7 @@ public class CommitService {
         List<String> commentsCommits = commentAboutCommit(commitsByDay);
         commitResponse.setResumeCommit(commentsCommits);
         commitResponse.setPercentualCommit(percentualCommitByTime(commitResponse));
+        commitResponse.setUrlLink(getUrlGit(repository.getName(),commitResponse.getNameUser()));
     }
 
     private CommitResponse constructCommitResponse(User user) {
@@ -79,5 +80,9 @@ public class CommitService {
             commentsAboutCommit.add(commentAboutCommit);
         }
         return commentsAboutCommit;
+    }
+
+    private String getUrlGit(String user,String repository){
+        return String.format(UtilResponse.URL_GITHUB_REPOSITORY,user,repository);
     }
 }

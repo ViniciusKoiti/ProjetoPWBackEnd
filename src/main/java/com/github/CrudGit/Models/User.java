@@ -30,4 +30,9 @@ public class User {
     public void setRepositories(List<Repository> repositories) {
         this.repositories = repositories;
     }
+
+    public User(String name,List<Repository> repositories){
+        name = this.name;
+        repositories = this.repositories;
+    }
 }
